@@ -1,0 +1,22 @@
+{
+  "name": "cypress-pr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asos-oliverwilson/cypress-pr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asos-oliverwilson/cypress-pr/issues"
+  },
+  "homepage": "https://github.com/asos-oliverwilson/cypress-pr#readme",
+  "devDependencies": {
+    "cypress": "^3.1.2"
+  }
+}
