@@ -6,7 +6,6 @@ describe('My first cypress test', () => {
       })
 
     it('should go to the repo', async () => {
-        let approvals;
         const accessToken = "token 15e1f98b33224914a24e4a7e36273304a6858ff5"
         const url = "https://github.com/asosteam";
         const username = "asos-oliverwilson";
@@ -31,10 +30,9 @@ describe('My first cypress test', () => {
         cy.get("a[href*='lists/pulls']").click()        
 
         cy.get("#issue-id-51").click()
-        cy.get("span[aria-label*='approved these changes']").then($approvals => {
-            approvals = $approvals
-            cy.get("a[title*='This PR has one dev approval']").eq(2).click()
-            cy.get("#label-filter-field").type(approvals)
-        })
+        const approvals = cy.get("span[aria-label*='approved these changes']")
+
+        cy.get("#partial-discussion-sidebar").find("div:nth-child(3) > details").click()
+        cy.get("#label-filter-field").type(approvals)
     });
 });
